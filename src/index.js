@@ -1,7 +1,7 @@
 
 import readdir from 'recursive-readdir';
 
-const readdirs = (dirs, callback) => {
+export default function (dirs, callback) {
     let list = [];
 
     readdir(dirs.shift(), function (err, res) {
@@ -28,5 +28,3 @@ const readdirs = (dirs, callback) => {
         })
     });
 };
-
-module.exports = readdirs;
