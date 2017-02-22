@@ -1,7 +1,7 @@
 
 const readdir = require('recursive-readdir');
 
-module.exports = function (dirs, callback) {
+function readdirs(dirs, callback) {
     let list = [];
 
     readdir(dirs.shift(), function (err, res) {
@@ -27,4 +27,6 @@ module.exports = function (dirs, callback) {
             }
         })
     });
-};
+}
+
+module.exports = readdirs;
